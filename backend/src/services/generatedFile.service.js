@@ -36,7 +36,7 @@ const getGeneratedFileByHash = async (resumeId, latexHash) => {
 };
 
 const markPreviousFilesAsOld = async (resumeId) => {
-    console.log("hit");
+   
   return await GeneratedFile.updateMany(
     {
       resumeId,
