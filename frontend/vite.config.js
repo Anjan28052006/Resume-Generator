@@ -5,8 +5,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    host: true,
+    host: '0.0.0.0',
     allowedHosts: true,
+    cors: true,
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
@@ -22,5 +23,11 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+  },
+  preview: {
+    port: 5173,
+    host: '0.0.0.0',
+    allowedHosts: true,
+    cors: true,
   },
 });
