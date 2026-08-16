@@ -11,9 +11,6 @@ const compile = async (latex) => {
   try {
     await fs.writeFile(texPath, latex, "utf8");
 
-    console.log("\n===== LATEX SENT TO TECTONIC =====");
-    console.log(latex);
-    console.log("===== END LATEX =====\n");
 
     await new Promise((resolve, reject) => {
       execFile(
